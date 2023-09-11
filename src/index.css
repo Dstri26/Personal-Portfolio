@@ -1,13 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --background-dark: #163034;
+  --background-light: #ffffff;
+  --primary-color: #b68d40;
+  --secondary-color: #f4ebd0;
+  --accent-color: #f4ebd0;
+  --button-color: #b68d40;
+  --button-text-color: #f4ebd0;
+  --primary-font: "Montserrat", sans-serif;
+}
+* {
+  font-family: var(--primary-font) !important;
+  font-weight: 400;
+  color: var(--primary-color);
+}
+html,
 body {
+  background-color: var(--background-dark);
+  border-radius: 0 !important;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+/* Custom scrollbar for WebKit (Chrome, Safari, and newer versions of Edge) */
+::-webkit-scrollbar {
+  width: 2px; /* Set the width of the scrollbar */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Track (the area on which the scrollbar is rendered) */
+::-webkit-scrollbar-track {
+  background: var(--background-light); /* Background color of the track */
+}
+
+/* Handle (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+  background: var(--button-color); /* Background color of the handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color); /* Background color of the handle on hover */
+}
+.navbar {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.navbar-toggler {
+  border: 0px solid black;
+  font-weight: 700;
+}
+
+.nav-link {
+  font-size: 2rem;
+  color: var(--primary-color);
+  font-weight: 500;
+  width: max-content;
+  text-align: center !important;
+}
+.nav-link:hover {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+.nav-item {
+  min-width: 5rem;
+}
+.btn-close {
+  font-size: 2rem;
+}
+.offcanvas {
+  width: 100% !important;
+  background: rgba(255, 255, 255, 0.8);
+}
+.btn {
+  background-color: var(--button-color) !important;
+  color: var(--button-text-color) !important;
+  border: 0px solid black;
+  border-radius: 0 !important;
+  padding: 0.8rem;
+  font-weight: 500;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+button:focus {
+  box-shadow: none !important;
+}
+.btn:hover {
+  background-color: var(--secondary-color) !important;
+  color: var(--button-color) !important;
+}
+
+.animation,
+.animation_layer {
+  height: 1100px;
+}
+
+.animation {
+  display: block;
+  position: relative;
+  z-index: 10;
+}
+
+.animation_layer {
+  background-position: bottom center;
+  background-size: auto 1140px;
+  background-repeat: repeat-x;
+  width: 100%;
+  position: absolute;
+}
+.animation_layer.parallax {
+  position: fixed;
+}
+
+#background {
+  background-image: url(./images/layer9.png);
+}
+
+#mountain6 {
+  background-image: url(./images/layer8.png);
+}
+
+#mountain5 {
+  background-image: url(./images/layer7.png);
+}
+
+#mountain4 {
+  background-image: url(./images/layer6.png);
+}
+
+#logolayer {
+  background-image: url(./images/layer5.png);
+}
+
+#mountain3 {
+  background-image: url(./images/layer4.png);
+}
+
+#mountain2 {
+  background-image: url(./images/layer3.png);
+}
+
+#mountain1 {
+  background-image: url(./images/layer2.png);
+}
+#name {
+  background-image: url(./images/logolayer.png);
+}
+#mountain0 {
+  background-image: url(./images/layer1.png);
+}
+.landing-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 90vh;
+}
+.landing-text {
+  font-weight: 700;
+  color: var(--primary-color);
+  max-width: 80%;
+}
+.main-section {
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--background-dark);
+}
+
+.contact {
+  padding: 1rem;
+  background: var(--background-dark);
+}
+.contact .heading {
+  margin-bottom: 30px;
+  text-align: center;
+  z-index: 999999;
+}
+.contact .main {
+  background: #ffffff;
+  box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.08);
+}
+.contact .main h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--background-dark);
+  margin: 0;
+  margin-bottom: 20px;
+}
+.contact .form-control {
+  padding: 25px;
+  font-size: 13px;
+  margin-bottom: 10px;
+  background: var(--background-light);
+  border:0;
+  border-bottom: 1px solid var(--primary-color);
+  border-radius: 0;
+
+}
+
+.contact .main .left {
+  padding: 40px 60px;
+}
+.contact .main .right {
+  /* background: var(--background-light); */
+  background-size: cover;
+  padding: 40px;
+  color: var(--background-dark);
+}
+.contact .fa{
+  color: var(--primary-color);
+}
+.contact .main .right h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.contact .main .right .info {
+  margin-bottom: 20px;
+}
+.contact .main .right .info i {
+  font-size: 25px;
+  color: var(--background-dark);
+}
+.contact .main .right .info span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-left: 15px;
+}
+.contact .main .right .social a {
+  text-decoration: none;
+  font-size: 30px;
+  color: #ffffff;
+  margin-right: 20px;
+}
+
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+  font-weight: 600;
+  text-transform: uppercase;
 }
