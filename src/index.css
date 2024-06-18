@@ -22,6 +22,12 @@ body {
   padding: 0;
   margin: 0;
 }
+.outlined {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--primary-color);
+  stroke-dasharray: 10%;
+  color:rgba(0, 0, 0, 0)
+}
 /* Custom scrollbar for WebKit (Chrome, Safari, and newer versions of Edge) */
 ::-webkit-scrollbar {
   width: 2px; /* Set the width of the scrollbar */
@@ -103,7 +109,7 @@ button:focus {
 
 .animation_layer {
   background-position: bottom center;
-  background-size: auto 1140px;
+  background-size: auto 100%;
   background-repeat: repeat-x;
   width: 100%;
   position: absolute;
@@ -111,7 +117,9 @@ button:focus {
 .animation_layer.parallax {
   position: fixed;
 }
-
+.outer-layer {
+  margin-top: 60px;
+}
 #background {
   background-image: url(./images/layer9.png);
 }
@@ -154,7 +162,7 @@ button:focus {
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 90vh;
+  height: 90%;
 }
 .landing-text {
   font-weight: 700;
@@ -162,7 +170,7 @@ button:focus {
   max-width: 80%;
 }
 .main-section {
-  min-height: 100vh;
+  min-height: 102vh;
   overflow: hidden;
   background: var(--background-dark);
 }
@@ -192,10 +200,9 @@ button:focus {
   font-size: 13px;
   margin-bottom: 10px;
   background: var(--background-light);
-  border:0;
+  border: 0;
   border-bottom: 1px solid var(--primary-color);
   border-radius: 0;
-
 }
 
 .contact .main .left {
@@ -207,7 +214,7 @@ button:focus {
   padding: 40px;
   color: var(--background-dark);
 }
-.contact .fa{
+.contact .fa {
   color: var(--primary-color);
 }
 .contact .main .right h4 {
@@ -235,7 +242,12 @@ button:focus {
   margin-right: 20px;
 }
 
-.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6 {
   font-weight: 600;
   text-transform: uppercase;
 }

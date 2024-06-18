@@ -1,0 +1,40 @@
+.masonry-like {
+  -webkit-column-count: 4;
+  -moz-column-count: 4;
+  -ms-column-count: 4;
+  column-count: 4;
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  -ms-column-gap: 20px;
+  column-gap: 20px;
+  font-size: 0.85em;
+}
+
+.masonry-like .card {
+  -webkit-transition: 1s ease all;
+  -moz-transition: 1s ease all;
+  -o-transition: 1s ease all;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-shadow: 2px 2px 4px 0 #ccc;
+  background-color: var(--background-light);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.masonry-like .card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+@media (min-width: 1440px) {
+  .masonry-like {
+    -moz-column-count: 7;
+    -webkit-column-count: 7;
+    -ms-column-count: 7;
+    column-count: 7;
+  }
+}

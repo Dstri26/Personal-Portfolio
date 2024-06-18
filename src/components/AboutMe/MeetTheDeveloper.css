@@ -1,0 +1,20 @@
+/* MeetTheDeveloper.css */
+.meet-the-developer {
+    position: absolute;
+    top: 50%;
+    right: -100%; /* Initially off-screen to the right */
+    transform: translate(0, -50%);
+    transition: right 0.5s ease-in-out;
+  }
+  
+  .meet-the-developer.visible {
+    right: 50%; /* Moves to the center when visible */
+  }
+  
+  /* You can customize the styles as needed */
+  h1 {
+    font-size: 24px;
+    color: #333;
+    /* Additional styles... */
+  }
+  
