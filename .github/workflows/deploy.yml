@@ -20,14 +20,14 @@ jobs:
 
     - name: Install dependencies and build
       run: |
-        npm install
-        npm run build-ci
+        npm install --legacy-peer-deps -f
+        npm run build-ci -f
       env:
-        CI: false  # Add this line to prevent ESLint from treating warnings as errors
+        CI: false
 
     - name: Deploy to GitHub Pages
       run: |
-        npm install -g gh-pages
-        gh-pages -d build
+        npm install -g gh-pages -f
+        gh-pages -d build -f
       env:
         GITHUB_TOKEN: ${{ secrets.GH_PAT }}
