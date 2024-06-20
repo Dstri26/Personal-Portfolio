@@ -10,11 +10,13 @@
   --button-text-color: #f4ebd0;
   --primary-font: "Montserrat", sans-serif;
 }
+
 * {
   font-family: var(--primary-font) !important;
   font-weight: 400;
   color: var(--primary-color);
 }
+
 html,
 body {
   background-color: var(--background-dark);
@@ -22,31 +24,38 @@ body {
   padding: 0;
   margin: 0;
 }
+
 .outlined {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--primary-color);
   stroke-dasharray: 10%;
-  color:rgba(0, 0, 0, 0)
+  color: rgba(0, 0, 0, 0);
 }
+
 /* Custom scrollbar for WebKit (Chrome, Safari, and newer versions of Edge) */
 ::-webkit-scrollbar {
-  width: 2px; /* Set the width of the scrollbar */
+  width: 2px;
+  /* Set the width of the scrollbar */
 }
 
 /* Track (the area on which the scrollbar is rendered) */
 ::-webkit-scrollbar-track {
-  background: var(--background-light); /* Background color of the track */
+  background: var(--background-light);
+  /* Background color of the track */
 }
 
 /* Handle (the draggable part of the scrollbar) */
 ::-webkit-scrollbar-thumb {
-  background: var(--button-color); /* Background color of the handle */
+  background: var(--button-color);
+  /* Background color of the handle */
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-color); /* Background color of the handle on hover */
+  background: var(--accent-color);
+  /* Background color of the handle on hover */
 }
+
 .navbar {
   width: 100%;
   padding: 0 10px;
@@ -64,20 +73,25 @@ body {
   width: max-content;
   text-align: center !important;
 }
+
 .nav-link:hover {
   font-size: 2.2rem;
   font-weight: 600;
 }
+
 .nav-item {
   min-width: 5rem;
 }
+
 .btn-close {
   font-size: 2rem;
 }
+
 .offcanvas {
   width: 100% !important;
   background: rgba(255, 255, 255, 0.8);
 }
+
 .btn {
   background-color: var(--button-color) !important;
   color: var(--button-text-color) !important;
@@ -88,9 +102,11 @@ body {
   font-size: 0.8rem;
   text-transform: uppercase;
 }
+
 button:focus {
   box-shadow: none !important;
 }
+
 .btn:hover {
   background-color: var(--secondary-color) !important;
   color: var(--button-color) !important;
@@ -98,7 +114,7 @@ button:focus {
 
 .animation,
 .animation_layer {
-  height: 1100px;
+  height: 110%;
 }
 
 .animation {
@@ -108,18 +124,21 @@ button:focus {
 }
 
 .animation_layer {
-  background-position: bottom center;
-  background-size: auto 100%;
-  background-repeat: repeat-x;
-  width: 100%;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
   position: absolute;
+  width: 100%;
 }
+
 .animation_layer.parallax {
   position: fixed;
 }
+
 .outer-layer {
   margin-top: 60px;
 }
+
 #background {
   background-image: url(./images/layer9.png);
 }
@@ -151,24 +170,56 @@ button:focus {
 #mountain1 {
   background-image: url(./images/layer2.png);
 }
+
 #name {
   background-image: url(./images/logolayer.png);
 }
+
 #mountain0 {
   background-image: url(./images/layer1.png);
 }
+
 .landing-text-container {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 90%;
+  height: 90vh !important;
 }
+
 .landing-text {
   font-weight: 700;
   color: var(--primary-color);
   max-width: 80%;
 }
+
+.developer-text {
+  font-size: 1rem;
+}
+
+.marquee-text {
+  font-size: 6rem;
+}
+
+
+@media (min-width: 1500px) {
+  .landing-text-container {
+    height: 80% !important;
+  }
+
+  .landing-text {
+    font-size: 6rem !important;
+  }
+
+  .developer-text {
+    font-size: 1.4rem;
+  }
+
+  .marquee-text {
+    font-size: 8rem;
+  }
+}
+
 .main-section {
   min-height: 102vh;
   overflow: hidden;
@@ -179,15 +230,18 @@ button:focus {
   padding: 1rem;
   background: var(--background-dark);
 }
+
 .contact .heading {
   margin-bottom: 30px;
   text-align: center;
   z-index: 999999;
 }
+
 .contact .main {
   background: #ffffff;
   box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.08);
 }
+
 .contact .main h3 {
   font-size: 20px;
   font-weight: 500;
@@ -195,6 +249,7 @@ button:focus {
   margin: 0;
   margin-bottom: 20px;
 }
+
 .contact .form-control {
   padding: 25px;
   font-size: 13px;
@@ -208,33 +263,40 @@ button:focus {
 .contact .main .left {
   padding: 40px 60px;
 }
+
 .contact .main .right {
   /* background: var(--background-light); */
   background-size: cover;
   padding: 40px;
   color: var(--background-dark);
 }
+
 .contact .fa {
   color: var(--primary-color);
 }
+
 .contact .main .right h4 {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 30px;
 }
+
 .contact .main .right .info {
   margin-bottom: 20px;
 }
+
 .contact .main .right .info i {
   font-size: 25px;
   color: var(--background-dark);
 }
+
 .contact .main .right .info span {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   margin-left: 15px;
 }
+
 .contact .main .right .social a {
   text-decoration: none;
   font-size: 30px;
@@ -250,4 +312,122 @@ button:focus {
 .display-6 {
   font-weight: 600;
   text-transform: uppercase;
+}
+
+/* Media Queries for larger screens */
+@media (min-width: 992px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .nav-link {
+    font-size: 2.5rem;
+  }
+
+  .nav-link:hover {
+    font-size: 2.7rem;
+  }
+
+  .landing-text-container {
+    height: 100%;
+  }
+
+  .landing-text {
+    font-size: 4rem;
+  }
+
+  .contact .main h3 {
+    font-size: 24px;
+  }
+
+  .contact .form-control {
+    padding: 30px;
+    font-size: 15px;
+  }
+
+  .contact .main .left {
+    padding: 50px 70px;
+  }
+
+  .contact .main .right h4 {
+    font-size: 24px;
+  }
+
+  .contact .main .right .info span {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar {
+    padding: 0 30px;
+  }
+
+  .nav-link {
+    font-size: 3rem;
+  }
+
+  .nav-link:hover {
+    font-size: 3.2rem;
+  }
+
+  .landing-text {
+    font-size: 5rem;
+  }
+
+  .contact .main h3 {
+    font-size: 28px;
+  }
+
+  .contact .form-control {
+    padding: 35px;
+    font-size: 18px;
+  }
+
+  .contact .main .left {
+    padding: 60px 80px;
+  }
+
+  .contact .main .right h4 {
+    font-size: 28px;
+  }
+
+  .contact .main .right .info span {
+    font-size: 18px;
+  }
+}
+
+/* src/BubbleUIComponent.css */
+.myBubbleUI {
+  width: 90%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: #163034;
+  border-radius: 50%;
+  box-shadow: inset 5px 5px 17px #091315,
+  inset -5px -5px 17px #234d53;
+
+}
+
+.child {
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+.child:hover {
+  transform: scale(1.1);
+}
+
+.bubble-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
