@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - master  # Change to your default branch if it's not `main`
+      - master  # Change to your default branch if it's not `master`
 
 jobs:
   deploy:
@@ -12,25 +12,20 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-      with:
-        persist-credentials: false
 
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '14' # or the version you're using
+        node-version: '16' # or the version you're using
 
     - name: Install dependencies and build
       run: |
         npm install -f
         npm run build-ci -f
 
-    - name: Configure Git
-      run: |
-        git config --global user.name 'Dstri26'
-        git config --global user.email 'trideep.india@gmail.com'
-
     - name: Deploy to GitHub Pages
       run: |
         npm install -g gh-pages -f
-        gh-pages -d build -r https://github.com/Dstri26/portfolio.git -f
+        gh-pages -d build -f
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_PAT }}
