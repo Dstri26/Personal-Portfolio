@@ -15,14 +15,19 @@ jobs:
       with:
         persist-credentials: false
 
-    - name: Install and build
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '14' # or the version you're using
+
+    - name: Install dependencies and build
       run: |
         npm install -f
-        npm run build
+        npm run build-ci -f
 
     - name: Deploy to GitHub Pages
       env:
         GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
       run: |
         npm install -g gh-pages -f
-        gh-pages -d build
+        gh-pages -d build -f
