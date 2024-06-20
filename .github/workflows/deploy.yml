@@ -31,8 +31,6 @@ jobs:
         git config --global user.email 'trideep.india@gmail.com'
 
     - name: Deploy to GitHub Pages
-      env:
-        GITHUB_TOKEN: ${{ secrets.GH_PAT }}
       run: |
         npm install -g gh-pages -f
-        gh-pages -d build -r https://<GH_PAT>:x-oauth-basic@github.com/Dstri26/portfolio.git -f
+        gh-pages -d build -r https://github.com/Dstri26/portfolio.git -f
