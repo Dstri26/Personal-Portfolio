@@ -25,9 +25,14 @@ jobs:
       env:
         CI: false
 
+    - name: Configure Git
+      run: |
+        git config --global user.email "trideep.india@gmail.com"
+        git config --global user.name "Trideep Barik"
+
     - name: Deploy to GitHub Pages
       run: |
         npm install -g gh-pages -f
         gh-pages -d build -f
       env:
-        GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
