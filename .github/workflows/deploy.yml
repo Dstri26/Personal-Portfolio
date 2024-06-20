@@ -25,6 +25,11 @@ jobs:
         npm install -f
         npm run build-ci -f
 
+    - name: Configure Git
+      run: |
+        git config --global user.name 'dstri26'
+        git config --global user.email 'trideep.india@gmail.com'
+
     - name: Deploy to GitHub Pages
       env:
         GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
