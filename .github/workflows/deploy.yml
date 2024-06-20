@@ -17,12 +17,12 @@ jobs:
 
     - name: Install and build
       run: |
-        npm install
+        npm install -f
         npm run build
 
     - name: Deploy to GitHub Pages
       env:
         GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
       run: |
-        npm install -g gh-pages
+        npm install -g gh-pages -f
         gh-pages -d build
