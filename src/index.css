@@ -201,7 +201,6 @@ button:focus {
   font-size: 6rem;
 }
 
-
 @media (min-width: 1500px) {
   .landing-text-container {
     height: 80% !important;
@@ -234,7 +233,7 @@ button:focus {
 .contact .heading {
   margin-bottom: 30px;
   text-align: center;
-  z-index: 999999;
+  z-index: 99;
 }
 
 .contact .main {
@@ -310,7 +309,7 @@ button:focus {
 .display-4,
 .display-5,
 .display-6 {
-  font-weight: 600;
+  font-weight: 600 !important;
   text-transform: uppercase;
 }
 
@@ -408,9 +407,7 @@ button:focus {
   overflow: hidden;
   background: #163034;
   border-radius: 50%;
-  box-shadow: inset 5px 5px 17px #091315,
-  inset -5px -5px 17px #234d53;
-
+  box-shadow: inset 5px 5px 17px #091315, inset -5px -5px 17px #234d53;
 }
 
 .child {

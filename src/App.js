@@ -10,11 +10,14 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import LandingPage from './LandingPage';
 import Experience from './components/Experience/Experience';
 import WorkPortfolio from './components/WorkPortfolio/WorkPortfolio';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { useState } from 'react';
+
 
 
 function App() {
   return (
-    <>
+    <div>
       <Navbar />
       <BrowserRouter>
         <Routes>
@@ -27,8 +30,8 @@ function App() {
           <Route path='/' element={<LandingPage />} />
         </Routes>
       </BrowserRouter>
-      
-    </>
+
+    </div>
   );
 }
 

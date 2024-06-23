@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-class Navbar extends React.Component {
-  render() {
-    return (
+const Navbar = () => {
+  return (
+    <div>
+
       <nav className="navbar navbar-expand-xs navbar-light bg-transparent fixed-top">
         {/* Logo */}
         <a className="navbar-brand" href="#">
@@ -58,17 +59,17 @@ class Navbar extends React.Component {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#section-skills">
+                <a className="nav-link" href="#section-experience">
                   EXPERIENCE
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#section-skills">
+                <a className="nav-link" href="#section-achievements">
                   ACHIEVEMENTS
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#section-skills">
+                <a className="nav-link" href="#section-contact">
                   CONTACT ME
                 </a>
               </li>
@@ -76,8 +77,8 @@ class Navbar extends React.Component {
           </div>
         </div>
       </nav>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Navbar;
